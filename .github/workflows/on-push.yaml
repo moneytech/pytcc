@@ -16,7 +16,7 @@ jobs:
       - name: Install libc headers
         shell: bash
         run: |
-          open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
+          open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.15.pkg
 
       - name: Checkout Repository
         uses: actions/checkout@v1.2.0
