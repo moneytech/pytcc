@@ -16,7 +16,7 @@ jobs:
       - name: Install libc headers
         shell: bash
         run: |
-          gcc -vv
+          gcc -xc -E -v -
 
       - name: Checkout Repository
         uses: actions/checkout@v1.2.0
