@@ -129,6 +129,7 @@ cdef class InMemBinary:
             raise MemoryError('Out of memory')
         tcc_set_lib_path(self.tcc_state, os.fsencode(TCC_LIB_PATH))
         tcc_set_output_type(self.tcc_state, output)
+        tcc_add_library_path(self.tcc_state, "/Applications/Xcode_11.4.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include")
         tcc_set_error_func(self.tcc_state, <void*>self, compile_error_func)
 
     cdef define(self, name:str, value:Union[str, None]=None, is_global=False):
